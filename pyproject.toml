@@ -1,0 +1,33 @@
+[project]
+name = "autobm"
+version = "0.1.0"
+dependencies = [
+    "openai",
+    "anthropic",
+    "jinja2",
+    "pandas",
+    "python-dotenv",
+    "toml",
+    "torch"
+]
+
+[tool.llm_client_config]
+default_log_dir = "logs"
+default_csv_dir = "logs"
+
+    [tool.llm_client_config.model_mapping.quest]
+    provider_type = "aliyun_openai_compatible"
+    model = "qwen-max-2025-01-25" 
+    base_url_env = "ALIYUN_QWEN_BASE_URL"
+    api_key_env = "ALIYUN_QWEN_API_KEY"
+
+    [tool.llm_client_config.model_mapping.code]
+    provider_type = "anthropic_claude"
+    model = "claude-3-5-sonnet-latest"
+    base_url_env = "ANTHROPIC_CLAUDE_BASE_URL"
+    api_key_env = "ANTHROPIC_CLAUDE_API_KEY"
+
+[tool.llm_client_config.system_prompts]
+quest = "You are a helpful assistant specialized in reasoning and analysing."
+code = "You are an expert coding assistant. Provide clean and efficient code solutions."
+default = "You are a helpful assistant."
