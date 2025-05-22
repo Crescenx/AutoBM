@@ -1,6 +1,6 @@
 # AutoBM
 
-(Add a brief project description here)
+An automated behavior modeling framework based on Large Language Models (LLM).
 
 ---
 
@@ -11,7 +11,7 @@
 Create a `.env` file in the root directory of the project. Add the following environment variables to this file:
 
 ```env
-ALIYUN_QWEN_BASE_URL="[https://dashscope.aliyuncs.com/compatible-mode/v1](https://dashscope.aliyuncs.com/compatible-mode/v1)"
+ALIYUN_QWEN_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"
 ALIYUN_QWEN_API_KEY="Your Aliyun API Key"
 
 ANTHROPIC_CLAUDE_BASE_URL=""
